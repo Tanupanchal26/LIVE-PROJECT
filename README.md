@@ -126,69 +126,7 @@ To avoid data leakage, the labeled data was split by date:
 
 The original `test.csv` is kept separate for generating final competition predictions.
 
----
 
-## Evaluation Metric
-
-Model performance will be measured using **Root Mean Square Percentage Error (RMSPE)**, consistent with the Kaggle competition scoring:
-
-$$RMSPE = \sqrt{\frac{1}{n} \sum \left(\frac{y_i - \hat{y}_i}{y_i}\right)^2}$$
-
----
-
-## Upcoming Work
-
-The following steps are planned and have not yet been started:
-
-- [ ] Feature engineering (extract day, month, year, week from `Date`; encode categorical columns)
-- [ ] Baseline model (e.g. linear regression or mean-sales benchmark)
-- [ ] Train and evaluate gradient boosting models (e.g. XGBoost, LightGBM)
-- [ ] Hyperparameter tuning on the validation split
-- [ ] Final evaluation on the July 2015 holdout set using RMSPE
-- [ ] Generate predictions for `test.csv`
-- [ ] Document findings and model results
-
----
-
-## Setup and Running the Project
-
-### Prerequisites
-- Python 3.11 installed
-- Kaggle account to download the datasets
-
-### 1. Clone the Repository
-
-```powershell
-git clone https://github.com/Tanupanchal26/Rossmann-Project.git
-cd Rossmann-Project
-```
-
-### 2. Create and Activate a Virtual Environment
-
-```powershell
-python -m venv venv
-.\venv\Scripts\Activate.ps1
-```
-
-### 3. Install Dependencies
-
-```powershell
-pip install pandas numpy matplotlib seaborn scikit-learn jupyter
-```
-
-### 4. Download the Datasets
-
-Download `train.csv`, `store.csv`, and `test.csv` from the [Kaggle competition page](https://www.kaggle.com/c/rossmann-store-sales/data) and place them in the `data/` folder.
-
-### 5. Launch Jupyter Notebook
-
-```powershell
-jupyter notebook
-```
-
-Then open `notebooks/rossmann_eda.ipynb` in your browser.
-
----
 
 ## Documentation
 
